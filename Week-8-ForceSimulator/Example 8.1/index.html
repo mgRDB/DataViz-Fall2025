@@ -31,7 +31,7 @@
         .force("collide",
             d3.forceCollide()
                 .radius(40)
-               // .iterations(5000)
+                .iterations(5000)
         )
         .force("x", d3.forceX())
         .force("y", d3.forceY())
@@ -39,7 +39,10 @@
 
     function ticked() {
         node_elements
-            .attr("cx", d=>d.x)
+            .attr("cx", d=> {
+                console.log(d)
+                return d.x
+            })
             .attr("cy", d=>d.y)
     }
 </script>

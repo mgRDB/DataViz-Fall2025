@@ -51,6 +51,7 @@
                         value:1+parseInt(rand_links()*10)})
         }
     }
+        console.log(links)
     
     // Before I start adding the forces to the nodes, using the forceSimulator
     // I have added the Marks for Nodes and Links
@@ -96,7 +97,10 @@
             .attr("cy", d=>d.y)
 
         link_elements
-            .attr("x1",d=>d.source.x)
+            .attr("x1",d=> {
+              //  console.log(d)
+                return d.source.x
+            })
             .attr("x2",d=>d.target.x)
             .attr("y1",d=>d.source.y)
             .attr("y2",d=>d.target.y)
