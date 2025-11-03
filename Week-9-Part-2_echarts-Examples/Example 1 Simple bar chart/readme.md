@@ -8,7 +8,7 @@ const myChart = echarts.init(dom);
 
 ## Step 2:
 ### Echarts visualization is based on one "option" Object 
-all the details relate dto the configuration of the chart can be added
+all the details related to the configuration of the chart can be added
 using the option
 <b> note that this option can be modified by user interaction </b>
 
